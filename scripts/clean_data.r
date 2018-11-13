@@ -10,7 +10,7 @@ source('functions.r')
 
 
 
-df = readRDS('./cl_apartments.rds')
+df = readRDS('../data/cl_apartments.rds')
 
 # basic cleaning: remove unrealistic outliers and unnecessary columns
 df = df[which(df$state == 'CA'),]
@@ -42,4 +42,4 @@ sbay = sbay[,names(df) %in% c('title','text','county','place','price','latitude'
 
 
 
-saveRDS(sbay, file = 'sbay.rds')
+saveRDS(sbay, file = '../data/sbay.rds')
